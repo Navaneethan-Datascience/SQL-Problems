@@ -1,4 +1,5 @@
-
+-- The procurement team needs to analyze supplier performance to ensure reliable delivery of components. 
+-- The task is to use SQL to find the most active suppliers, identify which suppliers dominate in different manufacturing regions, and detect any supply gaps in Asia. This will help improve vendor selection and reduce supply chain risks.
 
 
 
