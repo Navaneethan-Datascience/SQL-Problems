@@ -39,5 +39,5 @@ WHERE us.stream_date >= ar.recommendation_date
 GROUP BY us.user_id
 )
 
-SELECT AVG(recommended_artist_coxunt) AS avg_artist_listened
+SELECT AVG(recommended_artist_count) AS avg_artist_listened
 FROM artist_recommended_count;  
