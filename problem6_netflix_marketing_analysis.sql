@@ -26,3 +26,14 @@ WHERE ds.signup_date BETWEEN '2024-01-01' AND '2024-01-31'
 GROUP BY dc.country_id, dc.country_name;
 
 -- Determine the average marketing spend per new subscriber for each country in Q1 2024 by rounding up to the nearest whole number to evaluate campaign efficiency.
+-- company spent avg marketing spent per person $47 in South Africa, $44 in India, $43 in Brazil and $37 in Indonesia.
+
+SELECT c.country_name,
+       CEIL(SUM(ms.amount_spent)*1.0/SUM(ds.num_new_subscribers)) AS avg_marketing_spend_per_new_subscriber
+FROM fact_marketing_spend AS ms
+JOIN fact_daily_subscriptions AS ds
+     ON ms.country_id = ds.country_id
+JOIN dimension_country AS c
+     ON ms.country_id = c.country_id
+WHERE ms.campaign_date BETWEEN '2024-01-01' AND '2024-03-31' AND (ds.signup_date BETWEEN '2024-01-01' AND '2024-03-31')
+GROUP BY c.country_name;
