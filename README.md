@@ -20,5 +20,5 @@ Through this repository, I aim to clearly showcase:
 
 
 ### Tech Stack
-* SQL, with emphasis on SELECT queries, joins, aggregations, window functions, subqueries, and conditional logic.
+* SQL, with emphasis on SELECT queries, joins, aggregations, window functions, subqueries, NULL Handling, and conditional logic.
 * Typical interview-style relational schemas, including domains like sales, marketing, product, users, and events.
